@@ -1,5 +1,7 @@
 # fastify-hide-powered-by
 
+[![Build Status][ci-img]][ci-url]
+[![Code coverage][cov-img]][cov-url]
 [![Code style][lint-img]][lint-url]
 [![Dependency Status][dep-img]][dep-url]
 [![Dev Dependency Status][dev-dep-img]][dev-dep-url]
@@ -13,49 +15,7 @@ Fastify plugin to remove the X-Powered-By header
 
 You may know [hide-powered-by](https://github.com/helmetjs/hide-powered-by) as a [hide-powered-by middleware](https://helmetjs.github.io/docs/hide-powered-by/) used in [helmet](https://github.com/helmetjs/helmet). And you could use it as a middleware in fastify also. So why i made this plugin?
 
-Benchmark with no plugin:
-
-```txt
-Running 20s test @ http://127.0.0.1:10290/pudge/rest/v0/benchmark
-1000 connections
-
-Stat         Avg     Stdev   Max
-Latency (ms) 32.37   8.9     1139.09
-Req/Sec      30444   1051.31 31048
-Bytes/Sec    4.53 MB 170 kB  4.63 MB
-
-609k requests in 20s, 90.7 MB read
-```
-
-Benchmark with hide-powered-by as middleware:
-
-```txt
-Running 20s test @ http://127.0.0.1:10290/pudge/rest/v0/benchmark
-1000 connections
-
-Stat         Avg     Stdev   Max
-Latency (ms) 31.03   199.2   9993.7
-Req/Sec      26617.6 2156.45 29400
-Bytes/Sec    3.97 MB 331 kB  4.38 MB
-
-532k requests in 20s, 79.3 MB read
-```
-
-Benchmark with this plugin:
-
-```txt
-Running 20s test @ http://127.0.0.1:10290/pudge/rest/v0/benchmark
-1000 connections
-
-Stat         Avg     Stdev  Max
-Latency (ms) 33.54   6.59   254.92
-Req/Sec      29398.4 935.01 30026
-Bytes/Sec    4.34 MB 143 kB 4.47 MB
-
-588k requests in 20s, 87.6 MB read
-```
-
-So that's the reason and wish you like it. :)
+You may find the reason in [benchmark result](./benchmarks/benchmark.txt) and wish you like it. :)
 
 ## Install
 
@@ -95,14 +55,17 @@ Default is `undefined` which means remove `X-Powered-By` header. If you set it t
 
 ## Changelog
 
-- 0.1.0: Init version
+- 0.2.0
+  - Add test case
+  - Add code coverage
+  - Add benchmarks
+- 0.1.0:
+  - Init version
 
-## Todo
-
-- Add test case
-- Add ci
-- Add benchmark scripts
-
+[ci-img]: https://img.shields.io/travis/poppinlp/fastify-hide-powered-by.svg?style=flat-square
+[ci-url]: https://travis-ci.org/poppinlp/fastify-hide-powered-by
+[cov-img]: https://img.shields.io/coveralls/poppinlp/fastify-hide-powered-by.svg?style=flat-square
+[cov-url]: https://coveralls.io/github/poppinlp/fastify-hide-powered-by?branch=master
 [lint-img]: https://img.shields.io/badge/code%20style-handsome-brightgreen.svg?style=flat-square
 [lint-url]: https://github.com/poppinlp/eslint-config-handsome
 [dep-img]: https://img.shields.io/david/poppinlp/fastify-hide-powered-by.svg?style=flat-square

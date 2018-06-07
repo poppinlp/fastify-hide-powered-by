@@ -1,0 +1,4 @@
+Average req/sec in 5 times 10s test
+with no plugin: 30516.14
+with hide-powered-by middleware: 27147.39
+with fastify-hide-powered-by plugin: 28907.20

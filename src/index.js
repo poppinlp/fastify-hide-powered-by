@@ -1,6 +1,6 @@
 const fp = require('fastify-plugin');
 
-const hidePoweredBy = (app, opts = {}, next) => {
+const hidePoweredBy = (app, opts, next) => {
 	const { setTo } = opts;
 
 	app.addHook('onSend', (request, reply, payload, next) => {
