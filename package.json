@@ -22,6 +22,9 @@
     "helmet",
     "hide-powered-by"
   ],
+  "files": [
+    "src"
+  ],
   "author": "PoppinL",
   "license": "MIT",
   "bugs": {
