@@ -1,4 +1,8 @@
-Average req/sec in 5 times 10s test
-with no plugin: 30516.14
-with hide-powered-by middleware: 27147.39
-with fastify-hide-powered-by plugin: 28907.20
+node version: v10.6.0
+platform: darwin
+cpus: [{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":76695500,"nice":0,"sys":41742840,"idle":302905720,"irq":0}},{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":42345340,"nice":0,"sys":17907860,"idle":361068920,"irq":0}},{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":74037950,"nice":0,"sys":35220040,"idle":312064170,"irq":0}},{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":43146590,"nice":0,"sys":17391170,"idle":360784310,"irq":0}}]
+
+Average req/sec in 3 times 10s test
+with no plugin: 22849.33
+with hide-powered-by middleware: 20253.80
+with fastify-hide-powered-by plugin: 22332.30

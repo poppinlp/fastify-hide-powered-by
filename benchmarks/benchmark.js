@@ -41,7 +41,7 @@ const test = name => new Promise((resolve, reject) => {
 const sleep = time => new Promise(resolve => setTimeout(resolve, time));
 
 const doCase = async name => {
-	const COUNT = 5;
+	const COUNT = 3;
 	const SLEEP = 3000;
 	const { desc } = caseMap[name];
 
@@ -61,7 +61,7 @@ const doCase = async name => {
 		`platform: ${platform()}`,
 		`cpus: ${JSON.stringify(cpus())}`,
 		'',
-		'Average req/sec in 5 times 10s test',
+		'Average req/sec in 3 times 10s test',
 		await doCase('pure'),
 		await doCase('middleware'),
 		await doCase('plugin')
