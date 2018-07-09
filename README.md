@@ -17,6 +17,11 @@ You may know [hide-powered-by](https://github.com/helmetjs/hide-powered-by) as a
 
 You may find the reason in [benchmark result](./benchmarks/benchmark.txt) and wish you like it. :)
 
+## Difference
+
+This plugin has passed all [hide-powered-by](https://github.com/helmetjs/hide-powered-by) test cases.
+And no difference in options.
+
 ## Install
 
 Via npm:
@@ -51,10 +56,12 @@ This plugin has the same options as the middleware in helmet.
 
 ### setTo {string|undefined}
 
-Default is `undefined` which means remove `X-Powered-By` header. If you set it to a string which means set `X-Powered-By` to that string.
+Default is `undefined` which means remove `X-Powered-By` header. You could pass a string in to set `X-Powered-By` to that.
 
 ## Changelog
 
+- 0.3.0
+  - Update test case
 - 0.2.0
   - Add test case
   - Add code coverage

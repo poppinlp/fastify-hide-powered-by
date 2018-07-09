@@ -1,10 +1,11 @@
 const fp = require('fastify-plugin');
 
 const hidePoweredBy = (app, opts, next) => {
-	const { setTo } = opts;
+	const HEADER = 'X-Powered-By';
+	const value = opts.setTo;
 
 	app.addHook('onSend', (request, reply, payload, next) => {
-		setTo ? reply.header('X-Powered-By', setTo) : reply.removeHeader('X-Powered-By');
+		value ? reply.header(HEADER, value) : reply.removeHeader(HEADER);
 		next();
 	});
 

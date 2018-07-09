@@ -12,44 +12,28 @@ test.beforeEach(t => {
 	t.context.app = app;
 });
 
-const testHandler = (t, opts, expectedHeader) => {
-	const { app } = t.context;
+const mock = async (t, opts, expected) => {
+	const rsp = await t.context.app.register(plugin, opts).inject({
+		method: 'get',
+		url: '/'
+	});
+	const header = rsp.headers['x-powered-by'];
 
-	t.plan(3);
-	app.register(plugin, opts);
-	app.inject(
-		{
-			method: 'GET',
-			url: '/'
-		},
-		(err, res) => {
-			const expected = {
-				payload: 'hello world',
-				header: expectedHeader
-			};
-			const target = {
-				payload: res.payload,
-				header: res.headers['x-powered-by']
-			};
-
-			t.is(err, null, 'should throw no error');
-			t.is(target.payload, expected.payload, 'should have expected response payload');
-			t.is(target.header, expected.header, 'should have expected response header');
-			t.end();
-		}
-	);
+	t.is(header, expected);
 };
 
-test.cb('default option', t => {
-	testHandler(t, {}, undefined);
+[undefined, {}].forEach(opts => {
+	test(`default action should be removing header: ${JSON.stringify(opts)}`, async t => {
+		await mock(t, opts, undefined);
+	});
 });
 
-test.cb('set setTo to foobar', t => {
-	testHandler(
+test('can set the header', async t => {
+	await mock(
 		t,
 		{
-			setTo: 'foobar'
+			setTo: 'steampowered'
 		},
-		'foobar'
+		'steampowered'
 	);
 });
