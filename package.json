@@ -1,6 +1,6 @@
 {
   "name": "fastify-hide-powered-by",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Fastify plugin to remove the X-Powered-By header",
   "main": "src/index.js",
   "scripts": {
