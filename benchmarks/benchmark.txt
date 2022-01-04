@@ -1,8 +1,8 @@
-node version: v10.6.0
+node version: v17.3.0
 platform: darwin
-cpus: [{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":76695500,"nice":0,"sys":41742840,"idle":302905720,"irq":0}},{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":42345340,"nice":0,"sys":17907860,"idle":361068920,"irq":0}},{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":74037950,"nice":0,"sys":35220040,"idle":312064170,"irq":0}},{"model":"Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz","speed":3100,"times":{"user":43146590,"nice":0,"sys":17391170,"idle":360784310,"irq":0}}]
+cpus: [{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":31280760,"nice":0,"sys":13945570,"idle":104207920,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":959790,"nice":0,"sys":941240,"idle":147452850,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":25973930,"nice":0,"sys":10599990,"idle":112780090,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":936580,"nice":0,"sys":857530,"idle":147559750,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":19694050,"nice":0,"sys":8199500,"idle":121460440,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":952970,"nice":0,"sys":829160,"idle":147571710,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":17442390,"nice":0,"sys":7037910,"idle":124873650,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":969920,"nice":0,"sys":787410,"idle":147596500,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":14142270,"nice":0,"sys":5450330,"idle":129761330,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":985180,"nice":0,"sys":758950,"idle":147609670,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":12491550,"nice":0,"sys":4651330,"idle":132211020,"irq":0}},{"model":"Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz","speed":2600,"times":{"user":986310,"nice":0,"sys":715460,"idle":147652000,"irq":0}}]
 
 Average req/sec in 3 times 10s test
-with no plugin: 22849.33
-with hide-powered-by middleware: 20253.80
-with fastify-hide-powered-by plugin: 22332.30
+with no plugin: 27512.58
+with hide-powered-by middleware: 26882.99
+with fastify-hide-powered-by plugin: 29152.97
