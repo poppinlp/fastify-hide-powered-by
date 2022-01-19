@@ -1,3 +1,6 @@
 import {FastifyInstance} from "fastify";
-declare function hidePoweredBy(inst:FastifyInstance, opts:object, next:()=>void):void
+export type HideOptions {
+	setTo?: string
+}
+declare function hidePoweredBy(inst:FastifyInstance, opts:HideOptions, next:()=>void):void
 export default hidePoweredBy;
